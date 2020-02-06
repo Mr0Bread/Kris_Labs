@@ -3,4 +3,4 @@ project(Kris_Labs)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Kris_Labs First_Lab/1_9.cpp)
+add_executable(Kris_Labs Third_Lab/3_1.cpp)
