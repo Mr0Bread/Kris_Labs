@@ -14,6 +14,14 @@ namespace mine {
     }
 }
 
+float getSquare1(const float number) {
+    return number * number;
+}
+
+float getSquare2(const float* number) {
+    return *number * *number;
+}
+
 int main() {
     float number = stof(mine::input("Enter number to raise in square\n> "));
     float* numberPtr = &number;
