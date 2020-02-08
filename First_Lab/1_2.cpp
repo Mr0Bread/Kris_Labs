@@ -2,40 +2,37 @@
 #include <string>
 #include <cmath>
 
-#define print std::cout
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    float input(std::string message) {
-        std::cout << message;
-        float temp;
-        std::cin >> temp;
-        return temp;
-    }
+float input(string message) {
+    cout << message;
+    float temp;
+    cin >> temp;
+    return temp;
+}
 
-    double returnTruncatedResult(double product) {
-        return trunc(product);
-    }
+double returnTruncatedResult(double product) {
+    return trunc(product);
+}
 
-    double returnRoundedResult(double product) {
-        return round(product);
-    }
+double returnRoundedResult(double product) {
+    return round(product);
 }
 
 int main() {
-    float number1 = mine::input("Enter first real number\n> ");
-    float number2 = mine::input("Enter second real number\n> ");
-    bool answer = mine::input("Enter 0 if you want rounded result and any other number, if you want truncated one\n> ");
+    float number1 = input("Enter first real number\n> ");
+    float number2 = input("Enter second real number\n> ");
+    bool answer = input("Enter 0 if you want rounded result and any other number, if you want truncated one\n> ");
 
-    print << number1 * number2 << newline;
+    cout << number1 * number2 << endl;
 
     if (answer) {
-        print << mine::returnTruncatedResult(number1 * number2) << " is Truncated result" << newline;
+        cout << returnTruncatedResult(number1 * number2) << " is Truncated result" << endl;
     } else {
-        print << mine::returnRoundedResult(number1 * number2) << " is Rounded" << newline;
+        cout << returnRoundedResult(number1 * number2) << " is Rounded" << endl;
     }
 
-    print << "Enter any key to close program...";
+    cout << "Enter any key to close program...";
     system("read");
 
     return 0;

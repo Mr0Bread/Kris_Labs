@@ -1,43 +1,39 @@
 #include <iostream>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    std::string input(std::string message) {
-        print << message;
-        std::string temp;
-        get >> temp;
-        return temp;
+string input(string message) {
+    print << message;
+    std::string temp;
+    cin >> temp;
+    return temp;
+}
+
+string encode(string basicString) {
+    string encoded;
+    for (char i : basicString) {
+        char encoded_char = i - 30;
+        encoded += encoded_char;
     }
 
-    std::string encode(std::string basicString) {
-        std::string encoded;
-        for (char i : basicString) {
-            char encoded_char = i - 30;
-            encoded += encoded_char;
-        }
-
-        return encoded;
-    }
+    return encoded;
 }
 
 int main() {
-    std::string password = mine::input("Enter your password\n> ");
-    std::string encodedPassword = mine::encode(password);
+    string password = input("Enter your password\n> ");
+    string encodedPassword = encode(password);
 
-    print << encodedPassword << newline;
+    cout << encodedPassword << endl;
 
-    std::string repeatedPassword = mine::input("Enter your password one more time\n> ");
-    std::string encodedRepeatedPassword = mine::encode(repeatedPassword);
+    string repeatedPassword = input("Enter your password one more time\n> ");
+    string encodedRepeatedPassword = encode(repeatedPassword);
 
-    print << encodedRepeatedPassword << newline;
+    cout << encodedRepeatedPassword << endl;
 
     if (encodedPassword == encodedRepeatedPassword) {
-        print << "Passwords are the same" << newline;
+        cout << "Passwords are the same" << endl;
     } else {
-        print << "Passwords differs" << newline;
+        cout << "Passwords differs" << endl;
     }
 
     system("read");

@@ -1,27 +1,23 @@
 #include <iostream>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    float input(std::string message) {
-        print << message;
-        float temp;
-        get >> temp;
-        return temp;
-    }
+float input(string message) {
+    print << message;
+    float temp;
+    cin >> temp;
+    return temp;
 }
 
 int main() {
-    int age = mine::input("Enter your age\n> ");
+    int age = input("Enter your age\n> ");
 
     if (age >= 18) {
-        print << "You are able to apply for driving license\n";
+        cout << "You are able to apply for driving license\n";
     } else if (age < 0) {
-        print << "You entered negative number\n";
+        cout << "You entered negative number\n";
     } else {
-        print << "You aren't able to apply for driving license\nYou need to wait " << 18 - age << " years\n";
+        cout << "You aren't able to apply for driving license\nYou need to wait " << 18 - age << " years\n";
     }
 
 

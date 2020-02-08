@@ -1,32 +1,29 @@
 #include <iostream>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
-#define PI 3.14159
+using namespace std;
 
-namespace mine {
-    float input(std::string message) {
-        print << message;
-        float temp;
-        get >> temp;
-        return temp;
-    }
+float PI = 3.14159
 
-    void printArea(float radius) {
-        print << PI * (radius * radius) << newline;
-    }
+float input(string message) {
+    print << message;
+    float temp;
+    cin >> temp;
+    return temp;
+}
 
-    void printCircumference(float radius) {
-        print << 2 * PI * radius << newline;
-    }
+void printArea(float radius) {
+    cout << PI * (radius * radius) << endl;
+}
+
+void printCircumference(float radius) {
+    cout << 2 * PI * radius << cout;
 }
 
 int main() {
     float radius = mine::input("Enter radius of a circle\n> ");
 
-    mine::printArea(radius);
-    mine::printCircumference(radius);
+    printArea(radius);
+    printCircumference(radius);
 
     system("read");
     return 0;

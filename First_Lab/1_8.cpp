@@ -1,16 +1,12 @@
 #include <iostream>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    float input(std::string message) {
-        print << message;
-        float temp;
-        get >> temp;
-        return temp;
-    }
+float input(string message) {
+    print << message;
+    float temp;
+    cin >> temp;
+    return temp;
 }
 
 int main() {
@@ -19,11 +15,11 @@ int main() {
     int num = 0;
 
     while (true) {
-        int tempNum = mine::input("Enter whole number\n> ");
+        int tempNum = input("Enter whole number\n> ");
 
         if (tempNum != 0) {
             num += tempNum;
-            print << num << newline;
+            cout << num << endl;
         } else {
             break;
         }

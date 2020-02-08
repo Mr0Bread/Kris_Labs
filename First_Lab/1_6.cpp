@@ -1,24 +1,20 @@
 #include <iostream>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    float input(std::string message) {
-        print << message;
-        float temp;
-        get >> temp;
-        return temp;
-    }
+float input(string message) {
+    print << message;
+    float temp;
+    cin >> temp;
+    return temp;
 }
 
 int main() {
-    float length = mine::input("Enter length of rectangular\n> ");
-    float width = mine::input("Enter width of rectangular\n> ");
+    float length = input("Enter length of rectangular\n> ");
+    float width = input("Enter width of rectangular\n> ");
 
-    print << "The area of rectangular is equal to " << length * width << newline;
-    print << "The perimeter of rectangular is equal to " << (length * 2) + (width * 2) << newline;
+    cout << "The area of rectangular is equal to " << length * width << endl;
+    cout << "The perimeter of rectangular is equal to " << (length * 2) + (width * 2) << endl;
 
     system("read");
     return 0;
