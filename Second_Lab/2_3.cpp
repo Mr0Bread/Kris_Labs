@@ -4,8 +4,8 @@
 using namespace std;
 
 string input(string message) {
-    print << message;
-    std::string temp;
+    cout << message;
+    string temp;
     cin >> temp;
     return temp;
 }

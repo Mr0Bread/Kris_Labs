@@ -1,34 +1,30 @@
 #include <iostream>
 #include <string>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    std::string input(std::string message) {
-        print << message;
-        std::string temp;
-        get >> temp;
-        return temp;
-    }
+string input(string message) {
+    cout << message;
+    string temp;
+    cin >> temp;
+    return temp;
 }
 
 float getSquare1(const float number) {
     return number * number;
 }
 
-float getSquare2(const float* number) {
+float getSquare2(const float *number) {
     return *number * *number;
 }
 
 int main() {
-    float number = stof(mine::input("Enter number to raise in square\n> "));
-    float* numberPtr = &number;
+    float number = stof(input("Enter number to raise in square\n> "));
+    float *numberPtr = &number;
 
-    print << getSquare1(number) << newline;
-    print << getSquare2(numberPtr) << newline;
+    cout << getSquare1(number) << endl;
+    cout << getSquare2(numberPtr) << endl;
 
-   system("read");
-   return 0;
+    system("read");
+    return 0;
 }

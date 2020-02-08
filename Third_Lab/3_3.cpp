@@ -1,28 +1,7 @@
 #include <iostream>
 #include <string>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
-
-int getFibonacci(int n);
-
-namespace mine {
-    std::string input(std::string message) {
-        print << message;
-        std::string temp;
-        get >> temp;
-        return temp;
-    }
-}
-
-int main() {
-    int n = stoi(mine::input("Enter number of Fibonacci numbers to display\n> "));
-
-    print << getFibonacci(n);
-
-    return 0;
-}
+using namespace std;
 
 int getFibonacci(int n) {
     if (n == 0)
@@ -32,4 +11,19 @@ int getFibonacci(int n) {
     else
         return getFibonacci(n - 1) + getFibonacci(n - 2);
 
+}
+
+string input(string message) {
+    cout << message;
+    string temp;
+    cin >> temp;
+    return temp;
+}
+
+int main() {
+    int n = stoi(input("Enter number of Fibonacci numbers to display\n> "));
+
+    cout << getFibonacci(n);
+
+    return 0;
 }

@@ -5,7 +5,7 @@ using namespace std;
 
 string input(string message) {
     print << message;
-    std::string temp;
+    string temp;
     cin >> temp;
     return temp;
 }

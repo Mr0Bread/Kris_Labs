@@ -5,24 +5,24 @@ using namespace std;
 
 string input(string message) {
     cout << message;
-    std::string temp;
+    string temp;
     cin >> temp;
     return temp;
 }
 
 int askMonthNum() {
-    print << "Enter number of month from 1 to 12\n> ";
+    cout << "Enter number of month from 1 to 12\n> ";
     int month;
-    get >> month;
+    cin >> month;
 
     if (month > 0 and month < 13) {
         return month;
     } else {
-        print << "Invalid month value!" << newline;
+        cout << "Invalid month value!" << endl;
     }
 }
 
-std::string getMonthName(int num) {
+string getMonthName(int num) {
     switch (num) {
         case 1:
             return "January";
@@ -49,33 +49,33 @@ std::string getMonthName(int num) {
         case 12:
             return "December";
         default:
-            print << "SOMETHING IS WRONG IN getMonthName function" << newline;
+            cout << "SOMETHING IS WRONG IN getMonthName function" << endl;
     }
 }
 
 int askDay(int monthNum) {
-    print << "Enter day\n> ";
+    cout << "Enter day\n> ";
     int day;
-    get >> day;
+    cin >> day;
 
     int daysInMonths[12]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     if (day > 0 and day < daysInMonths[monthNum - 1]) {
         return day;
     } else {
-        print << "SOMETHING WRONG IN askDay function" << newline;
+        cout << "SOMETHING WRONG IN askDay function" << endl;
     }
 }
 
 int main() {
     int year = stoi(mine::input("Enter year\n> "));
-    print << year << newline;
+    cout << year << endl;
 
     int monthNum = mine::askMonthNum();
-    std::string monthName = mine::getMonthName(monthNum);
+    string monthName = getMonthName(monthNum);
 
-    int day = mine::askDay(monthNum);
-    std::string afterpos;
+    int day = askDay(monthNum);
+    string afterpos;
 
     switch (day) {
         case 1:
@@ -92,7 +92,7 @@ int main() {
             break;
     }
 
-    print << day << afterpos << " " << monthName << " " << year << newline;
+    cout << day << afterpos << " " << monthName << " " << year << endl;
 
 
     system("read");

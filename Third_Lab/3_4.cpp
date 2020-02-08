@@ -1,17 +1,13 @@
 #include <iostream>
 #include <string>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    std::string input(std::string message) {
-        print << message;
-        std::string temp;
-        get >> temp;
-        return temp;
-    }
+string input(string message) {
+    cout << message;
+    string temp;
+    cin >> temp;
+    return temp;
 }
 
 int countFact(int n) {
@@ -23,9 +19,9 @@ int countFact(int n) {
 }
 
 int main() {
-    int n = stoi(mine::input("Enter which factorial you want to get\n> "));
+    int n = stoi(input("Enter which factorial you want to get\n> "));
 
-    print << countFact(n);
+    cout << countFact(n);
 
     return 0;
 }
