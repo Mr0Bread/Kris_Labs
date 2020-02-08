@@ -3,7 +3,7 @@
 using namespace std;
 
 float input(string message) {
-    print << message;
+    cout << message;
     float temp;
     cin >> temp;
     return temp;

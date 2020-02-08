@@ -1,26 +1,22 @@
 #include <iostream>
 #include <string>
 
-#define print std::cout
-#define get std::cin
-#define newline std::endl
+using namespace std;
 
-namespace mine {
-    std::string input(std::string message) {
-        print << message;
-        std::string temp;
-        get >> temp;
-        return temp;
-    }
+string input(string message) {
+    print << message;
+    std::string temp;
+    cin >> temp;
+    return temp;
 }
 
 int main() {
-    std::string name = mine::input("Enter your name, please\n> ");
-    std::string surname = mine::input("Enter your surname, please\n> ");
+    string name = input("Enter your name, please\n> ");
+    string surname = input("Enter your surname, please\n> ");
 
-    std::string sum = name + surname;
+    string sum = name + surname;
 
-    print << sum << newline;
+    cout << sum << endl;
 
     system("read");
     return 0;

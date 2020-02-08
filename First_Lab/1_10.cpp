@@ -5,7 +5,7 @@ using namespace std;
 float PI = 3.14159
 
 float input(string message) {
-    print << message;
+    cout << message;
     float temp;
     cin >> temp;
     return temp;
